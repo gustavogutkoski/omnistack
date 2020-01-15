@@ -1,10 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
+const routes = require('./routes');
 
 // cria aplicação
 const app = express();
 
-mongoose.connect('mongodb+srv://<username>:<password>@cluster0-eiras.mongodb.net/<base>?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://gustavogutkoski:7580656za@cluster0-eiras.mongodb.net/test?retryWrites=true&w=majority',
 {
     useNewUrlParser: true,
     useUnifiedTopology: true
@@ -12,9 +13,6 @@ mongoose.connect('mongodb+srv://<username>:<password>@cluster0-eiras.mongodb.net
 
 // permite que o express entenda requisições em JSON
 app.use(express.json());
-
-app.get('/', (req, res) => {
-    return res.json({ message: 'alou tete' });
-});
+app.use(routes);
 
 app.listen(3333);
