@@ -5,7 +5,7 @@ const routes = require('./routes');
 // cria aplicação
 const app = express();
 
-mongoose.connect('mongodb+srv://gustavogutkoski:7580656za@cluster0-eiras.mongodb.net/test?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://<username>:<password>@cluster0-eiras.mongodb.net/<base>?retryWrites=true&w=majority',
 {
     useNewUrlParser: true,
     useUnifiedTopology: true
