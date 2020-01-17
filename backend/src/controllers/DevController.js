@@ -29,7 +29,7 @@ module.exports = {
         dev = await Dev.create({
                         githubUser,
                         name,
-                        avatar_url,
+                        avatarUrl: avatar_url,
                         bio,
                         techs: techsArr,
                         location
